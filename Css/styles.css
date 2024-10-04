@@ -1,6 +1,9 @@
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+}
 body{
     margin: 0;
-    background-color: #000;
+    background: black;
     color: #eee;
     font-family: Poppins;
     font-size: 12px;
@@ -8,6 +11,7 @@ body{
 a{
     text-decoration: none;
 }
+
 :root{
     --width-pc: 1140px;
     --width-thumbnail: 150px;
@@ -48,9 +52,9 @@ header a{
 }
 .carousel .list .item .content{
     position: absolute;
-    top: 20%;
+    top: 10%;
     width: var(--width-pc);
-    max-width: 80%;
+    max-width: 90%;
     left: 50%;
     transform: translateX(-50%);
     padding-right: 30%;
@@ -58,9 +62,15 @@ header a{
     color: #fff;
     text-shadow: 0 5px 10px #0004;
 }
+.carousel .list .item .title{
+    margin-top: 10px;
+}
 .carousel .list .item .author{
+    border-radius: 20px;
+    width: 90px;
+    height: 3px;
+    background-color: #fff;
     font-weight: bold;
-    letter-spacing: 10px;
 }
 .carousel .list .item .title,
 .carousel .list .item .topic{
@@ -69,7 +79,7 @@ header a{
     line-height: 1.3em;
 }
 .carousel .list .item .topic{
-    color: #f1683a;
+    color: #219090;
 }
 .carousel .list .item .buttons{
     display: grid;
@@ -79,7 +89,7 @@ header a{
     margin-top: 20px;
 }
 .carousel .list .item .buttons button{
-    border: none;
+    border-radius: 10px;
     background-color: #eee;
     letter-spacing: 3px;
     font-family: Poppins;
@@ -90,6 +100,7 @@ header a{
     border: 1px solid #fff;
     color: #eee;
 }
+
 /* thumbail */
 .thumbnail{
     position: absolute;
@@ -155,6 +166,17 @@ header a{
     font-family: monospace;
     font-weight: bold;
     transition: .5s;
+}
+.buttons button{
+    background-color: rgba(255, 0, 0, 0) !important;
+    color: white;
+    border: 1px solid #fff;
+    & :hover{
+        cursor: pointer;
+        & span{
+            transform: scale(1.1);
+        }
+    }
 }
 .arrows button:hover{
     background-color: #fff;
