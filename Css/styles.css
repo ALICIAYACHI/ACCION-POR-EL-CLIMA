@@ -160,12 +160,13 @@ header a{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #eee4;
+    background-color:  #fff;
+
     border: none;
-    color: #fff;
+    color: #000000;
     font-family: monospace;
     font-weight: bold;
-    transition: .5s;
+    transition: .3s;
 }
 .buttons button{
     background-color: rgba(255, 0, 0, 0) !important;
