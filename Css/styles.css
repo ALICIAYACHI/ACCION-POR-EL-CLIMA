@@ -81,19 +81,28 @@ header a{
 .carousel .list .item .topic{
     color: #219090;
 }
-.carousel .list .item .buttons{
-    display: grid;
-    grid-template-columns: repeat(2, 130px);
-    grid-template-rows: 40px;
-    gap: 5px;
-    margin-top: 20px;
-}
 .carousel .list .item .buttons button{
-    border-radius: 10px;
-    background-color: #eee;
-    letter-spacing: 3px;
-    font-family: Poppins;
-    font-weight: 500;
+    margin-top: 70px; 
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+}
+.carousel .list .item .buttons button:hover{
+    color: #edf1f3; /* Cambia el color del texto al pasar el mouse */
+    box-shadow: 0 0 10px #efeff1, 0 0 30px #e4e6ea, 0 0 40px #9ea5b0;
+    border-color: #92a4b5;
+    cursor: pointer;
+}
+.carousel .list .item .buttons button:active{
+    background-color: #ff5733;
+    color: white;
 }
 .carousel .list .item .buttons button:nth-child(2){
     background-color: transparent;
@@ -153,7 +162,7 @@ header a{
     width: 300px;
     max-width: 30%;
     display: flex;
-    gap: 10px;
+    gap: 50px;
     align-items: center;
 }
 .arrows button{
