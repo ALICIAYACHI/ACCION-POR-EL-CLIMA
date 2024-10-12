@@ -30,6 +30,49 @@ header{
 header a{
     color: #eee;
     margin-right: 40px;
+    position: relative;
+}
+
+/* Estilos para el contenedor del header */
+.header-encuesta {
+    background-color: transparent;
+    padding: 0px;
+    text-align: right;
+    position: absolute;
+    top: 10px;
+    right: 300px;
+    font-size: 10px;
+    white-space: normal;
+    left: 50px;
+    line-height: 1.2;
+
+}
+
+/* Estilos para la lista y los elementos de la lista */
+.header-encuesta ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: white;
+    display: block;
+}
+
+.header-encuesta li {
+    display: inline;
+    margin-right: -300px;
+}
+
+/* Estilos para los enlaces */
+.header-encuesta a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+/* Estilos cuando pasas el puntero por encima del enlace */
+.header-encuesta a:hover {
+    text-decoration: underline;
 }
 /* carousel */
 .carousel{
