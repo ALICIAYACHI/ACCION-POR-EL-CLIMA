@@ -3,19 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/Css/footer.css">
-  <link rel="stylesheet" href="/Css/header.css">
   <link rel="stylesheet" href="/Css/styles.css">
   <title>Acción por el clima</title>
 </head>
 <body>
-  <header></header>
-    <nav>
-        <a href="">Home</a>
-        <a href="">Contacts</a>
-        <a href="">Info</a>
-    </nav>
-</header>
+    
+
+ <!-- Menú hamburguesa -->
+ <div class="menu-hamburguesa" onclick="toggleMenu()">
+    <div class="linea"></div>
+    <div class="linea"></div>
+    <div class="linea"></div>
+  </div>
+
+  <!-- Contenedor del menú desplegable -->
+  <div class="menu-desplegable" id="menu">
+    <a class="menu-item" href="Acciones.html">Acciones por el clima</a> <br>    
+    <a class="menu-item" href="Recolección.html">Recolección de info</a>    
+
+  </div>
+
+
 
 <!-- carousel -->
 <div class="carousel">
@@ -25,12 +33,6 @@
         <div class="item">
             <img src="/img/fuente1.1.png">
             <div class="content">
-                <div class="header-encuesta">
-                    <ul>
-                        <li><a href="encuesta.html">Diseño y estadísticas de la encuesta</a></li>
-                    </ul>
-                </div>
-
                 <div class="author"></div>
                 <div class="title">DEFORESTACIÓN </div>
                 <div class="topic">EN VIVO</div>
@@ -48,11 +50,6 @@
         <div class="item">
             <img src="img/fuente2.1.png">
             <div class="content">
-                <div class="header-encuesta">
-                    <ul>
-                        <li><a href="index.html">Diseño y estadísticas de la encuesta</a></li>
-                    </ul>
-                </div>
                 <div class="author"></div>
                 <div class="title">EL COSTO OCULTO DE</div>
                 <div class="topic">LA MINERÍA</div>
@@ -69,11 +66,6 @@
         <div class="item">
             <img src="/img/fuente3.1.png">
             <div class="content">
-                <div class="header-encuesta">
-                    <ul>
-                        <li><a href="index.html">Diseño y estadísticas de la encuesta</a></li>
-                    </ul>
-                </div>
                 <div class="author"></div>
                 <div class="title">APPLE Y SU</div>
                 <div class="topic">HUELLA VERDE</div>
@@ -84,18 +76,12 @@
                     <a href="https://www.apple.com/es/newsroom/2024/04/apple-cuts-greenhouse-emissions-in-half/" target="_blank">
                         <button>Ver información</button>
                     </a>
-                    
                 </div>
             </div>
         </div>
         <div class="item">
             <img src="/img/fuente4.1.png">
             <div class="content">
-                <div class="header-encuesta">
-                    <ul>
-                        <li><a href="index.html">Diseño y estadísticas de la encuesta</a></li>
-                    </ul>
-                </div>
                 <div class="author"></div>
                 <div class="title">PETRÓLEO</div>
                 <div class="topic">LA AMENAZA AMAZÓNICA</div>
@@ -112,11 +98,6 @@
         <div class="item">
             <img src="/img/fuente5.1.png">
             <div class="content">
-                <div class="header-encuesta">
-                    <ul>
-                        <li><a href="index.html">Diseño y estadísticas de la encuesta</a></li>
-                    </ul>
-                </div>
                 <div class="author"></div>
                 <div class="title">EL CLIMA EN</div>
                 <div class="topic">NÚMEROS</div>
@@ -133,11 +114,6 @@
         <div class="item">
             <img src="/img/foto1.png">
             <div class="content">
-                <div class="header-encuesta">
-                    <ul>
-                        <li><a href="index.html">Diseño y estadísticas de la encuesta</a></li>
-                    </ul>
-                </div>
                 <div class="author"></div>
                 <div class="title">ACCIÓN POR</div>
                 <div class="topic">EL CLIMA</div>
@@ -236,6 +212,24 @@
     <!-- time running -->
     <div class="time"></div>
 </div>
+<script>
+    function toggleMenu() {
+      var menu = document.getElementById('menu');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+
+    // Función para mostrar el popup
+    function showPopup(id) {
+      var popup = document.getElementById(id);
+      popup.style.display = 'flex';
+    }
+
+    // Función para cerrar el popup
+    function closePopup(id) {
+      var popup = document.getElementById(id);
+      popup.style.display = 'none';
+    } 
+</script>
 <script src="/js/script.js"></script>
 </body>
 </html>

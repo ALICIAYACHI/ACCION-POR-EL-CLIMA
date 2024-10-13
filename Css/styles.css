@@ -21,7 +21,7 @@ header{
     width: var(--width-pc);
     max-width: 80%;
     margin: auto;
-    height: 50px;
+    height: 10px;
     display: flex;
     align-items: center;
     position: relative;
@@ -29,54 +29,74 @@ header{
 }
 header a{
     color: #eee;
-    margin-right: 40px;
+    margin-right: 80px;
     position: relative;
 }
 
-/* Estilos para el contenedor del header */
-.header-encuesta {
-    background-color: transparent;
-    padding: 0px;
-    text-align: right;
+
+
+
+/* Estilo del contenedor del menú hamburguesa y del menú desplegable */
+nav {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los enlaces y el menú hamburguesa */
+    align-items: center; /* Centrar verticalmente */
+    padding: 10px 20px; /* Espaciado en el contenedor */
+    background-color: #333; /* Color de fondo del nav */
+}
+.menu-hamburguesa {
+    position: fixed; /* Asegura que esté fijo en la pantalla */
+    top: 20px; /* Ajusta la posición superior según prefieras */
+    right: 20px; /* Ajusta la posición derecha según prefieras */
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1000; /* Asegura que esté en frente de otros elementos */
+  }
+  
+  .menu-hamburguesa .linea {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(255, 255, 255); /* Color de las líneas */
+  }
+
+/* Contenedor del menú desplegable */
+.menu-desplegable {
+    display: none; /* Ocultarlo por defecto */
+    background-color: rgba(2, 2, 2, 0.516); /* Cambiado a transparente */
+    padding: 10px; /* Espaciado */
     position: absolute;
-    top: 10px;
-    right: 300px;
-    font-size: 10px;
-    white-space: normal;
-    left: 50px;
-    line-height: 1.2;
-
+    top: 50px; /* Espacio desde el top */
+    right: 0px; /* Mover al lado derecho */
+    z-index: 1000;
 }
 
-/* Estilos para la lista y los elementos de la lista */
-.header-encuesta ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    color: white;
-    display: block;
+/* Estilo de los elementos del menú */
+.menu-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10px;
+    margin: -5px 0px;
+    cursor: pointer;
+    color: #ffffff; /* Color de texto */
+    &:hover{
+        background-color: rgb(82, 82, 82);
+    }
+    padding: 10px 10px;
 }
 
-.header-encuesta li {
-    display: inline;
-    margin-right: -300px;
-}
 
-/* Estilos para los enlaces */
-.header-encuesta a {
-    text-decoration: none;
-    font-size: 18px;
-    color: white;
-    transition: color 0.3s, text-decoration 0.3s;
-}
 
-/* Estilos cuando pasas el puntero por encima del enlace */
-.header-encuesta a:hover {
-    text-decoration: underline;
-}
+
+
+
+
+
 /* carousel */
 .carousel{
-    height: 100vh;
+    height: 107vh;
     margin-top: -50px;
     width: 100vw;
     overflow: hidden;
@@ -212,10 +232,10 @@ header a{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color:  #fff;
+    background-color:  #979393a4;
 
     border: none;
-    color: #000000;
+    color: #ffffff;
     font-family: monospace;
     font-weight: bold;
     transition: .3s;
@@ -232,8 +252,8 @@ header a{
     }
 }
 .arrows button:hover{
-    background-color: #fff;
-    color: #000;
+    background-color: #1617178b;
+    color: #ffffff55;
 }
 
 /* animation */
