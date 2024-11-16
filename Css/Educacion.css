@@ -1,0 +1,68 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e0f7fa;
+}
+
+header {
+    background-color: #2e7d32;
+}
+
+nav a {
+    color: white;
+    font-weight: 600;
+}
+
+h1 {
+    color: #2e7d32;
+}
+
+.faq-section {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.faq-section h2 {
+    font-size: 1.75rem;
+    color: #2e7d32;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.faq-item {
+    border-bottom: 1px solid #cfd8dc;
+    padding: 1rem 0;
+    cursor: pointer;
+}
+
+.faq-item h3 {
+    font-size: 1.125rem;
+    color: #37474f;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-item img {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 1rem;
+}
+
+.faq-item p {
+    font-size: 1rem;
+    color: #546e7a;
+    margin-top: 0.5rem;
+    display: none; /* Oculto por defecto */
+}
+
+.faq-item.active p {
+    display: block; /* Mostrar el texto cuando esté activo */
+}
+
+.faq-item.active i {
+    transform: rotate(180deg); /* Rotar el icono de flecha hacia arriba */
+}

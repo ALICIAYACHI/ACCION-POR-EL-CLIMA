@@ -41,21 +41,31 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(141, 252, 138, 0.1);
+            transition: transform 0.3s ease;
         }
         .grid-item.selected {
             border-color: #1b5e20;
         }
+
+        /* Efecto flotante solo para el ícono */
         .grid-item i {
             font-size: 2.5em;
             margin-bottom: 10px;
+            transition: transform 0.3s ease;
         }
+
+        .grid-item:hover i {
+            transform: translateY(-10px); /* Solo el ícono flota */
+        }
+
         .grid-item p {
             color: #4e4e4e;
             font-size: 1em;
             margin: 0;
         }
         .details {
+            display: none; /* Ocultar todas las secciones al inicio */
             background-color: #ffffff;
             border-radius: 10px;
             padding: 20px;
@@ -63,6 +73,9 @@
             width: 80%;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: left;
+        }
+        .details.active {
+            display: block; /* Mostrar la sección activa */
         }
         .details h2 {
             color: #1b5e20;
@@ -82,10 +95,16 @@
             color: #4e4e4e;
             margin-bottom: 5px;
         }
+        
+        /* Ocultamos la CTA inicialmente */
         .cta {
+            display: none; /* Ocultar inicialmente */
             background-color: #e0f7e9;
             padding: 20px;
             margin-top: 30px;
+        }
+        .cta.active {
+            display: block; /* Mostrar cuando se seleccione una opción */
         }
         .cta h2 {
             color: #1b5e20;
@@ -120,46 +139,43 @@
         </div>
 
         <nav class="opciones-desplegado">
-        
             <a href="index.html">Inicio</a>
             <a href="Acciones.html">Acciones</a>
-            <a href="#">Educación</a>
-            <a href="Noticias">Noticias</a>
+            <a href="Educacion.html">Educación</a>
+            <a href="Noticias.html">Noticias</a>
             <a href="Recolección.html">Recolección</a>
-
-            
         </nav>
     </header>
     <div class="container">
         <h1>Acciones por el Clima</h1>
         <p class="subtitle">Pequeños cambios, gran impacto. Descubre cómo puedes marcar la diferencia hoy.</p>
         <div class="grid">
-            <div class="grid-item selected">
+            <div class="grid-item" onclick="showDetails('transporte')">
                 <i class="fas fa-bicycle" style="color: #1e88e5;"></i>
                 <p>Transporte Sostenible</p>
             </div>
-            <div class="grid-item">
+            <div class="grid-item" onclick="showDetails('energia')">
                 <i class="fas fa-lightbulb" style="color: #fbc02d;"></i>
                 <p>Ahorro de Energía</p>
             </div>
-            <div class="grid-item">
+            <div class="grid-item" onclick="showDetails('reciclaje')">
                 <i class="fas fa-recycle" style="color: #43a047;"></i>
                 <p>Reciclaje</p>
             </div>
-            <div class="grid-item">
+            <div class="grid-item" onclick="showDetails('plastico')">
                 <i class="fas fa-leaf" style="color: #00acc1;"></i>
                 <p>Reducir Plásticos</p>
             </div>
-            <div class="grid-item">
+            <div class="grid-item" onclick="showDetails('dieta')">
                 <i class="fas fa-utensils" style="color: #fb8c00;"></i>
                 <p>Dieta Sostenible</p>
             </div>
-            <div class="grid-item">
+            <div class="grid-item" onclick="showDetails('reforestacion')">
                 <i class="fas fa-tree" style="color: #388e3c;"></i>
                 <p>Reforestación</p>
             </div>
         </div>
-        <div class="details">
+        <div id="transporte" class="details">
             <h2>Transporte Sostenible</h2>
             <p>Opta por el transporte público, bicicleta o caminar para reducir emisiones. Utilizar transporte sostenible puede disminuir tu huella de carbono hasta en un 30%.</p>
             <h3>Impacto</h3>
@@ -172,11 +188,111 @@
                 <li>Considera un vehículo eléctrico o híbrido para tus desplazamientos necesarios</li>
             </ul>
         </div>
-        <div class="cta">
-            <h2>¡Únete al Movimiento!</h2>
-            <button>Comprométete Ahora</button>
+        <div id="energia" class="details">
+            <h2>Ahorro de Energía</h2>
+            <p>Apaga luces y dispositivos no utilizados. Usa bombillas LED y electrodomésticos eficientes. Puedes reducir tu consumo energético y tus facturas hasta un 20%.</p>
+            <h3>Impacto</h3>
+            <p>Disminución de la demanda energética, reducción de emisiones de gases de efecto invernadero y ahorro económico.</p>
+            <h3>Consejos prácticos</h3>
+            <ul>
+                <li>Instala termostatos inteligentes</li>
+                <li>Utiliza electrodomésticos con certificación energética A+++</li>
+                <li>Aprovecha la luz natural y ventilación</li>
+                <li>Aísla adecuadamente tu hogar para mejorar la eficiencia térmica</li>
+            </ul>
+        </div>
+        <div id="reciclaje" class="details">
+            <h2>Reciclaje</h2>
+            <p>Separa correctamente tus residuos. El reciclaje adecuado puede reducir la cantidad de desechos en vertederos hasta un 75%.</p>
+            <h3>Impacto</h3>
+            <p>Conservación de recursos naturales, reducción de la contaminación y ahorro de energía en la producción de nuevos materiales.</p>
+            <h3>Consejos prácticos</h3>
+            <ul>
+                <li>Infórmate sobre el sistema de reciclaje local</li>
+                <li>Reutiliza materiales siempre que sea posible</li>
+                <li>Participa en programas de reciclaje comunitarios</li>
+            </ul>
+        </div>
+        <div id="plastico" class="details">
+            <h2>Reducir Plásticos</h2>
+            <p>Elimina el uso de plásticos de un solo uso como bolsas y botellas. Puedes reducir el plástico desechado en un 40% con pequeños cambios.</p>
+            <h3>Impacto</h3>
+            <p>Reducción de la contaminación plástica en océanos y tierra, conservación de la fauna marina y disminución del consumo de petróleo.</p>
+            <h3>Consejos prácticos</h3>
+            <ul>
+                <li>Utiliza botellas reutilizables</li>
+                <li>Lleva tus propias bolsas de tela</li>
+                <li>Compra a granel para evitar empaques innecesarios</li>
+                <li>Elige productos sin empaques plásticos</li>
+            </ul>
+        </div>
+        <div id="dieta" class="details">
+            <h2>Dieta Sostenible</h2>
+            <p>Reduce el consumo de carne y aumenta el de vegetales. Una dieta basada en plantas puede reducir tus emisiones de carbono en un 20%.</p>
+            <h3>Impacto</h3>
+            <p>Reducción de la huella de carbono, conservación del agua y disminución del uso de tierras agrícolas.</p>
+            <h3>Consejos prácticos</h3>
+            <ul>
+                <li>Incorpora más verduras y frutas locales en tu dieta</li>
+                <li>Opta por proteínas vegetales como legumbres y frutos secos</li>
+                <li>Reduce el desperdicio alimentario planificando tus comidas</li>
+                <li>Apoya la agricultura sostenible comprando productos orgánicos</li>
+            </ul>
+        </div>
+        <div id="reforestacion" class="details">
+            <h2>Reforestación</h2>
+            <p>Planta árboles en tu comunidad o apoya proyectos de reforestación. Un solo árbol puede absorber hasta 22 kg de CO2 por año.</p>
+            <h3>Impacto</h3>
+            <p>Captura de carbono, mejora de la biodiversidad y reducción de la erosión del suelo.</p>
+            <h3>Consejos prácticos</h3>
+            <ul>
+                <li>Participa en jornadas de plantación de árboles</li>
+                <li>Cuida los árboles existentes en tu entorno</li>
+                <li>Apoya proyectos de reforestación globales</li>
+                <li>Promueve la conservación de bosques en tu comunidad</li>
+            </ul>
         </div>
     </div>
-    <script src="/js/btn_menu.js"></script>
+
+    <div class="cta">
+        <h2>¡Empieza Hoy Mismo!</h2>
+        <button onclick="window.location.href='https://www.un.org/sustainabledevelopment/es/climate-change/'">Más Información</button>
+    </div>
+
+    <script>
+        function showDetails(sectionId) {
+            // Ocultar todas las secciones de detalles
+            var detailsSections = document.querySelectorAll('.details');
+            detailsSections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+
+            // Mostrar la sección seleccionada
+            var selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.classList.add('active');
+            }
+
+            // Quitar la clase 'selected' de todos los ítems
+            var gridItems = document.querySelectorAll('.grid-item');
+            gridItems.forEach(function(item) {
+                item.classList.remove('selected');
+            });
+
+            // Añadir la clase 'selected' al ítem clicado
+            var selectedItem = document.querySelector(`.grid-item[onclick="showDetails('${sectionId}')"]`);
+            if (selectedItem) {
+                selectedItem.classList.add('selected');
+            }
+
+            // Mostrar el bloque CTA
+            var cta = document.querySelector('.cta');
+            if (cta) {
+                cta.classList.add('active'); // Activar CTA cuando se selecciona una opción
+            }
+        }
+    </script>
 </body>
 </html>
+
+
