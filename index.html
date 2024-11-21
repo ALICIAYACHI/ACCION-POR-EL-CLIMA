@@ -4,26 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/Css/styles.css">
+  <link rel="stylesheet" href="/Css/header.css">
   <title>Acción por el clima</title>
+  <style>
+
+  </style>
 </head>
 <body>
     
 
- <!-- Menú hamburguesa -->
- <div class="menu-hamburguesa" onclick="toggleMenu()">
-    <div class="linea"></div>
-    <div class="linea"></div>
-    <div class="linea"></div>
-  </div>
+    <header>
+        <div class="logo">
+            <img src="/img/Logo.png" alt="">
+            <div class="frame">
+                <div class="center">
+                    <div class="linea primero"></div>
+                    <div class="linea segundo"></div>
+                    <div class="linea tercero"></div>
+                </div>
+            </div>
+        </div>
 
-  <!-- Contenedor del menú desplegable -->
-  <div class="menu-desplegable" id="menu">
-    <a class="menu-item" href="Acciones.html">Acciones</a> <br>
-    <a class="menu-item" href="Educacion.html">Educación</a> <br>
-    <a class="menu-item" href="Noticias.html">Noticias</a> <br>      
-    <a class="menu-item" href="Recolección.html">Recolección </a>    
+        <nav class="opciones-desplegado">
 
-  </div>
+            <a href="index.html">Inicio</a>
+            <a href="Acciones.html">Acciones</a>
+            <div class="dropdown">
+                <a href="Educacion.html" class="dropbtn">Educación</a>
+                <div class="dropdown-content">
+                    <a href="Recursos.html" class="text-white font-semibold" >Recursos</a>
+                    <a href="Cursos.html" class="text-white font-semibold" >Cursos</a>
+                    <a href="FAQ.html" class="text-white font-semibold" >FAQ</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Noticias</a>
+                <div class="dropdown-content">
+                    <a href="politicas-climaticas.html" class="text-white font-semibold" >Politicas Climaticas</a>
+                    <a href="tecnologia-verde.html" class="text-white font-semibold" >Tecnología verde</a>
+                    <a href="impactos-climaticos.html" class="text-white font-semibold" >Impactos Climaticos</a>
+                    <a href="proyectos-sostenibles.html" class="text-white font-semibold" >Proyectos Sostenibles</a>
+                </div>
+            </div>
+            <a href="Recolección.html">Recolección</a>
+        </nav>
+    </header>
 
 
 

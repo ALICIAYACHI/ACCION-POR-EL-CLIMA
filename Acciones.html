@@ -11,6 +11,9 @@
             margin: 0;
             padding: 0;
             text-align: center;
+            background-image: url(/img/Acciones.png);
+            background-size: cover;
+            background-repeat: no-repeat;
         }
         .container {
             padding: 20px;
@@ -99,7 +102,6 @@
         /* Ocultamos la CTA inicialmente */
         .cta {
             display: none; /* Ocultar inicialmente */
-            background-color: #e0f7e9;
             padding: 20px;
             margin-top: 30px;
         }
@@ -123,12 +125,14 @@
         .cta button:hover {
             background-color: #145a14;
         }
+        
     </style>
+
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="/img/climatic.jpg" alt="">
+            <img src="/img/Logo.png" alt="">
             <div class="frame">
                 <div class="center">
                     <div class="linea primero"></div>
@@ -139,10 +143,26 @@
         </div>
 
         <nav class="opciones-desplegado">
+
             <a href="index.html">Inicio</a>
             <a href="Acciones.html">Acciones</a>
-            <a href="Educacion.html">Educación</a>
-            <a href="Noticias.html">Noticias</a>
+            <div class="dropdown">
+                <a href="Educacion.html" class="dropbtn">Educación</a>
+                <div class="dropdown-content">
+                    <a href="Recursos.html" class="text-white font-semibold" >Recursos</a>
+                    <a href="Cursos.html" class="text-white font-semibold" >Cursos</a>
+                    <a href="FAQ.html" class="text-white font-semibold" >FAQ</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Noticias</a>
+                <div class="dropdown-content">
+                    <a href="politicas-climaticas.html" class="text-white font-semibold" >Politicas Climaticas</a>
+                    <a href="tecnologia-verde.html" class="text-white font-semibold" >Tecnología verde</a>
+                    <a href="impactos-climaticos.html" class="text-white font-semibold" >Impactos Climaticos</a>
+                    <a href="proyectos-sostenibles.html" class="text-white font-semibold" >Proyectos Sostenibles</a>
+                </div>
+            </div>
             <a href="Recolección.html">Recolección</a>
         </nav>
     </header>

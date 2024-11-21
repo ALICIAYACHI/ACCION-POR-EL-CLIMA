@@ -3,10 +3,10 @@
 }
 body{
     margin: 0;
-    background: black;
     color: #eee;
     font-family: Poppins;
     font-size: 12px;
+    overflow: hidden;
 }
 a{
     text-decoration: none;
@@ -17,33 +17,11 @@ a{
     --width-thumbnail: 150px;
     --height-thumbnail: 220px;
 }
-header{
-    width: var(--width-pc);
-    max-width: 80%;
-    margin: auto;
-    height: 10px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    z-index: 100;
-}
-header a{
-    color: #eee;
-    margin-right: 80px;
-    position: relative;
-}
 
 
 
 
-/* Estilo del contenedor del menú hamburguesa y del menú desplegable */
-nav {
-    display: flex;
-    justify-content: space-between; /* Espacio entre los enlaces y el menú hamburguesa */
-    align-items: center; /* Centrar verticalmente */
-    padding: 10px 20px; /* Espaciado en el contenedor */
-    background-color: #333; /* Color de fondo del nav */
-}
+
 .menu-hamburguesa {
     position: fixed; /* Asegura que esté fijo en la pantalla */
     top: 20px; /* Ajusta la posición superior según prefieras */
@@ -96,7 +74,7 @@ nav {
 
 /* carousel */
 .carousel{
-    height: 107vh;
+    height: 100vh;
     margin-top: -50px;
     width: 100vw;
     overflow: hidden;

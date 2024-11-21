@@ -1,0 +1,166 @@
+<html>
+
+<head>
+    <title>Educación sobre el Cambio Climático</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Css/header.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url(/img/Educacion.png);
+            background-size: cover;
+            background-position: top center;
+        }
+
+
+        .preguntas {
+            background-color: rgba(0, 0, 0, 0.459);
+        }
+    </style>
+    
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="/img/Logo.png" alt="">
+            <div class="frame">
+                <div class="center">
+                    <div class="linea primero"></div>
+                    <div class="linea segundo"></div>
+                    <div class="linea tercero"></div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="opciones-desplegado">
+
+            <a href="index.html">Inicio</a>
+            <a href="Acciones.html">Acciones</a>
+            <div class="dropdown">
+                <a href="Educacion.html" class="dropbtn">Educación</a>
+                <div class="dropdown-content">
+                    <a href="Recursos.html" class="text-white font-semibold" >Recursos</a>
+                    <a href="Cursos.html" class="text-white font-semibold" >Cursos</a>
+                    <a href="FAQ.html" class="text-white font-semibold" >FAQ</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Noticias</a>
+                <div class="dropdown-content">
+                    <a href="politicas-climaticas.html" class="text-white font-semibold" >Politicas Climaticas</a>
+                    <a href="tecnologia-verde.html" class="text-white font-semibold" >Tecnología verde</a>
+                    <a href="impactos-climaticos.html" class="text-white font-semibold" >Impactos Climaticos</a>
+                    <a href="proyectos-sostenibles.html" class="text-white font-semibold" >Proyectos Sostenibles</a>
+                </div>
+            </div>
+            <a href="Recolección.html">Recolección</a>
+        </nav>
+    </header>
+</body>
+
+<body class="bg-gray-100">
+    <main class="max-w-4xl mx-auto p-4">
+        <!-- Sección de FAQ -->
+        <section id="faq" class="section">
+            <h2 class="text-4xl font-bold text-white mb-6">Preguntas Frecuentes</h2>
+            <p class="mb-6 text-lg text-white font-semibold">La educación es fundamental en la lucha contra el cambio
+                climático. Comprender sus causas y efectos nos empodera para tomar acciones significativas y crear un
+                futuro sostenible para todos.</p>
+
+            <!-- Preguntas Frecuentes -->
+            <div class="p-4 preguntas">
+                <div class="border-b border-gray-300 py-4 cursor-pointer" onclick="toggleFaq('faq1')">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-white">¿Qué es el cambio climático?</h3>
+                        <i id="icon-faq1" class="fas fa-chevron-down text-white"></i>
+                    </div>
+                    <div id="faq1" class="hidden mt-2">
+                        <p class="text-white">El cambio climático se refiere a las variaciones a largo plazo en las
+                            temperaturas y patrones climáticos globales. Principalmente es causado por las actividades
+                            humanas, especialmente la quema de combustibles fósiles, que liberan gases de efecto
+                            invernadero.</p>
+                    </div>
+                </div>
+
+                <div class="border-b border-gray-300 py-4 cursor-pointer" onclick="toggleFaq('faq2')">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-white">¿Cuáles son los principales impactos del cambio
+                            climático?</h3>
+                        <i id="icon-faq2" class="fas fa-chevron-down text-white"></i>
+                    </div>
+                    <div id="faq2" class="hidden mt-2">
+                        <p class="text-white">Los impactos incluyen el aumento del nivel del mar, eventos climáticos
+                            extremos más frecuentes, cambios en los patrones de precipitación, pérdida de biodiversidad
+                            y
+                            amenazas a la seguridad alimentaria. Estos efectos varían según la región y pueden tener
+                            consecuencias económicas y sociales significativas.</p>
+                    </div>
+                </div>
+
+                <div class="border-b border-gray-300 py-4 cursor-pointer" onclick="toggleFaq('faq3')">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-white">¿Qué puedo hacer para combatir el cambio climático?
+                        </h3>
+                        <i id="icon-faq3" class="fas fa-chevron-down text-white"></i>
+                    </div>
+                    <div id="faq3" class="hidden mt-2">
+                        <p class="text-white">Puedes tomar varias acciones: reducir tu consumo de energía, optar por
+                            transporte sostenible, disminuir el consumo de carne, reciclar y reutilizar, apoyar
+                            políticas
+                            climáticas y educar a otros. Cada acción, por pequeña que sea, suma en el esfuerzo global
+                            contra
+                            el cambio climático.</p>
+                    </div>
+                </div>
+
+                <div class="border-b border-gray-300 py-4 cursor-pointer" onclick="toggleFaq('faq4')">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-white">¿Cómo afecta el cambio climático a la
+                            biodiversidad?</h3>
+                        <i id="icon-faq4" class="fas fa-chevron-down text-white"></i>
+                    </div>
+                    <div id="faq4" class="hidden mt-2">
+                        <p class="text-white">El cambio climático altera los hábitats naturales, los ciclos de vida y
+                            los
+                            patrones migratorios de muchas especies. Esto puede llevar a la extinción de aquellas que no
+                            pueden adaptarse rápidamente a las nuevas condiciones, afectando a ecosistemas enteros y a
+                            la
+                            cadena alimentaria.</p>
+                    </div>
+                </div>
+
+                <div class="border-b border-gray-300 py-4 cursor-pointer" onclick="toggleFaq('faq5')">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-white">¿Qué son los acuerdos internacionales sobre el
+                            clima?</h3>
+                        <i id="icon-faq5" class="fas fa-chevron-down text-white"></i>
+                    </div>
+                    <div id="faq5" class="hidden mt-2">
+                        <p class="text-white">Los acuerdos internacionales sobre el clima son pactos entre países para
+                            abordar colectivamente el cambio climático. El más notable es el Acuerdo de París de 2015,
+                            que
+                            busca limitar el aumento de la temperatura global muy por debajo de 2°C sobre los niveles
+                            preindustriales.</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </section>
+        <script>
+            function toggleFaq(id) {
+                const content = document.getElementById(id);
+                const icon = document.getElementById('icon-' + id);
+                content.classList.toggle('hidden');
+                icon.classList.toggle('fa-chevron-down');
+                icon.classList.toggle('fa-chevron-up');
+            }
+        </script>
+    </main>
+</body>
+
+</html>
